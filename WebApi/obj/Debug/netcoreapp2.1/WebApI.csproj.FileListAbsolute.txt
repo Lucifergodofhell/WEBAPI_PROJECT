@@ -1,0 +1,14 @@
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.csprojAssemblyReference.cache
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.csproj.CoreCompileInputs.cache
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.RazorAssemblyInfo.cache
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.RazorAssemblyInfo.cs
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.AssemblyInfoInputs.cache
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.AssemblyInfo.cs
+c:\users\rdhal\source\repos\WebApI\WebApI\bin\Debug\netcoreapp2.1\WebApI.deps.json
+c:\users\rdhal\source\repos\WebApI\WebApI\bin\Debug\netcoreapp2.1\WebApI.runtimeconfig.json
+c:\users\rdhal\source\repos\WebApI\WebApI\bin\Debug\netcoreapp2.1\WebApI.runtimeconfig.dev.json
+c:\users\rdhal\source\repos\WebApI\WebApI\bin\Debug\netcoreapp2.1\WebApI.dll
+c:\users\rdhal\source\repos\WebApI\WebApI\bin\Debug\netcoreapp2.1\WebApI.pdb
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.RazorTargetAssemblyInfo.cache
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.dll
+c:\users\rdhal\source\repos\WebApI\WebApI\obj\Debug\netcoreapp2.1\WebApI.pdb
