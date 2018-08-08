@@ -36,12 +36,7 @@ namespace WebApI.Controllers
 			return content;
 
 		}
-		[HttpGet("{id}")]
-		public string GetbyId(long id)
-		{
-			string user="";
-			return user;
-		}
+	
 		[HttpPut("{id}")]
 		public void Update(long id, TodoItem item)
 		{
