@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using WebApI.Models;
+using Newtonsoft.Json.Linq;
 
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -16,19 +17,27 @@ namespace WebApI.Controllers
 	[ApiController]
 	public class TodoController : Controller
 	{
-		public string path= @"C:\Users\rdhal\source\repos\WebApI\WEBAPI_PROJECT\WebApI\Data\Data.json";
+		public string path= @"E:\cloned\WEBAPI_PROJECT\WebApi\Data\Data.Json";
 		[HttpPost]
 		public void Create(TodoItem item)
 		{
-			var jsonData = System.IO.File.ReadAllText(path);
-			// De-serialize to object or create new list
-			var List = JsonConvert.DeserializeObject<List<TodoItem>>(jsonData)
-					  ?? new List<TodoItem>();
-			List.Add(item);
-			jsonData = JsonConvert.SerializeObject(List);
-			System.IO.File.WriteAllText(path, jsonData+Environment.NewLine);
+           
+           
+            // Read existing json data
+            var jsonData = System.IO.File.ReadAllText(path);
+            // De-serialize to object or create new list
+            var list = JsonConvert.DeserializeObject<List<TodoItem>>(jsonData)
+                                  ?? new List<TodoItem>();
 
-		}	
+            // Add any new employees
+            list.Add(item);
+           
+            // Update json data string
+            jsonData = JsonConvert.SerializeObject(list);
+            System.IO.File.WriteAllText(path, jsonData);
+
+        }
+		
 		[HttpGet]
 		public string GetAll()
 		{	
@@ -55,4 +64,40 @@ namespace WebApI.Controllers
 			}
 		}
 	}
+		[HttpGet("{id}")]
+		public string GetbyId(int id)
+		{
+            var jsonData = System.IO.File.ReadAllText(path);
+            // De-serialize to object or create new list
+            var list = JsonConvert.DeserializeObject<List<TodoItem>>(jsonData)
+                                  ?? new List<TodoItem>();
+
+            if (list == null)
+                return "No Object";
+
+            var newJsonString = JsonConvert.SerializeObject(list.Where(i => i.Id == id));
+
+            return newJsonString;
+
+        }
+
+
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+
+            var jsonData = System.IO.File.ReadAllText(path);
+            var items = JsonConvert.DeserializeObject<List<TodoItem>>(jsonData);
+
+            if (items==null) return;
+
+            var newJsonString = JsonConvert.SerializeObject(items.Where(i => i.Id != id));
+
+            System.IO.File.WriteAllText(path, newJsonString);
+
+
+        }
+
+
+    }
 }
